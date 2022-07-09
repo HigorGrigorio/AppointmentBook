@@ -1,0 +1,45 @@
+<div class="form-wrapper"> 
+    <% if(contact) { %> 
+         <form action="/contact/edit/<%= contact._id %> " method="post" class="pfrom form contact-form>
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>"/>    
+            <h1 class="title">Edit Contact!</h1>
+            <p class="text">Enter contact datails</p>
+            <div class="space"></div>
+            <label class="label-input icon-modify">
+                <img class="icon" src="../../../assets/img/user.svg" alt="">
+                <input value = "<%= contact.name + ' ' + contact.surname %>" type="text" placeholder="Name" name="name">
+            </label>
+            <label class="label-input icon-modify">
+                <img class="icon" src="../../../assets/img/envelope.svg" alt="">
+                <input value = "<%= contact.email %>" type="email" placeholder="E-mail" name="email">
+            </label>
+            <label class="label-input icon-modify">
+                <img class="icon" src="../../../assets/img/telephone.svg" alt="">
+                <input value = "<%= contact.telephone %> " type="tel" placeholder="Telephone" name="telephone">
+            </label>
+            <button class="pbtn">Save contact</button>
+            <%- include('./message.ejs') %> 
+        </form>
+    <% } else { %> 
+        <form action="/contact/add" method="post" class="pfrom form contact-form">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>"/>   
+            <h1 class="title">Register Contact!</h1>
+            <p class="text">Enter contact datails</p>
+            <div class="space"></div>
+            <label class="label-input icon-modify">
+                <img class="icon" src="../../../assets/img/user.svg" alt="">
+                <input type="text" placeholder="Name" name="name">
+            </label>
+            <label class="label-input icon-modify">
+                <img class="icon" src="../../../assets/img/envelope.svg" alt="">
+                <input type="email" placeholder="E-mail" name="email">
+            </label>
+            <label class="label-input icon-modify">
+                <img class="icon" src="../../../assets/img/telephone.svg" alt="">
+                <input type="tel" placeholder="Telephone" name="telephone">
+            </label>
+            <button class="pbtn">Register contact</button>
+            <%- include('./message.ejs') %> 
+        </form>
+    <% } %> 
+</div>  

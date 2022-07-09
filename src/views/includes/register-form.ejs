@@ -1,0 +1,27 @@
+<div class="form-wrapper">
+    <form action="/register/add" method="post" class="pfrom form form-register">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+        <h1 class="title">Enter your best e-mail!</h1>
+        <p class="text">If you still don't have an account,<br> fill out the form below
+        </p>
+        <div class="space"></div>
+        <label class="label-input icon-modify">
+            <img src="../../assets/img/user.svg" alt="">
+            <input type="text" placeholder="Name" name="name">
+        </label>
+        <label class="label-input icon-modify">
+            <img class="icon" src="../../assets/img/envelope.svg" alt="">
+            <input type="email" placeholder="E-mail" name="email">
+        </label>
+        <label class="label-input icon-modify">
+            <img src="../../assets/img/key.svg" alt="">
+            <input type="password" name="password" placeholder="Password">
+        </label>
+        <label class="label-input icon-modify">
+            <img src="../../assets/img/key.svg" alt="">
+            <input name="confirm_password" type="password" placeholder="Confirm Password">
+        </label>
+        <button class="pbtn">Register</button>
+        <%- include('./message.ejs') %>
+    </form>
+</div>

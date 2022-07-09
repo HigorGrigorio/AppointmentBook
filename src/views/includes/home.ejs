@@ -1,0 +1,19 @@
+<section class="light-gray-cointainer">
+    <h1 class="title">
+        <% if(user && user !== undefined) { %>    
+            <%= 'Welcome to your contact book, '+ user.name.split(' ')[0]; %>
+        <% } else { %>
+            <%= 'Welcome to the contact book' %>
+        <% } %>  
+    </h1>
+    <p class="text p5">Thanks for your preference!</p>
+    <div class="home-img-wrapper">
+        <%- include('./message.ejs') %> 
+        <img src="../../assets/img/checklist.svg" alt="">
+    </div>
+    <% if(!user || user === undefined) { %> 
+        <p class="text p5">
+            <a href="/login/index" class="link">Log in</a> with your account <br>or<br> <a href="/register/index" class="link">Register here!</a>
+        </p>
+    <% } %> 
+</section>

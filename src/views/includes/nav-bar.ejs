@@ -1,0 +1,21 @@
+<nav class="nav-bar">
+    <div class="flex-table nav-content">
+        <input type="checkbox" id="nav-control">
+        <div class="logo-wrapper">
+            <a class="logo">
+                <img src="../../../assets/img/notebook.png">
+            </a>
+            <p class="text"> | Contact Book</p>
+        </div>
+        <div class="navigation-wrapper" id="navigation-wrapper">
+            <a href="/#home" class="pbtn" id="home">Home</a>
+            <% if(user && user !== undefined) { %>
+                <a href="/contact/index/#contact" class="pbtn" id="contact">Access your contac book</a>
+                <a href="/logout/#logout" class="pbtn" id="logout">Logout</a>
+            <% } else { %>
+                <a href="/login/index/#login" id="login" class="pbtn">Access your account</a>
+                <a href="/register/index/#register" id="register" class="pbtn">Register</a>
+            <% } %>
+        </div>
+    </div>
+</nav>

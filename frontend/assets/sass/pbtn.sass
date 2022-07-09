@@ -1,0 +1,23 @@
+@import './palette.sass'
+@import './btn-base'
+
+$pbutton-base-color: $green !default
+$pbutton-base-border-color: $green !default
+$pbutton-base-background: $light-gray !default
+
+.pbtn
+    @include btn-base($pbutton-base-color, $pbutton-base-border-color, $pbutton-base-background)
+    font-weight: 300
+    &:focus
+        cursor: pointer
+        box-shadow: 0 3px 3px #ddd
+        background-color: $green
+        border: 1px solid $green
+        color: #fff      
+    &:hover
+        cursor: pointer
+        box-shadow: 0 3px 3px #ddd
+        background-color: $green
+        border: 1px solid $green
+        color: #fff
+

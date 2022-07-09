@@ -1,0 +1,20 @@
+<div class="form-wrapper login-form">
+    <form action="/login/" method="post" class="form form-login">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>"/>
+        <h1 class="title">Welcome back!</h1>
+        <p class="text">it's good to see you here!</p>
+        <div class="space"></div>
+        <label class="label-input icon-modify">
+            <img class="icon" src="../../assets/img/envelope.svg" alt="">
+            <input type="email" placeholder="E-mail" name="email">
+        </label>
+        <label class="label-input icon-modify">
+            <img src="../../assets/img/key.svg" alt="">
+            <input type="password"name="password" placeholder="Password">
+        </label>
+        <a href="#" class="link fypasswd">forgot your password?</a>
+        <a href="/register/index/#register" class="link fypasswd">not yet registered? register</a>
+        <button class="pbtn">Sing in</button>
+        <%- include('./message') %> 
+    </form>
+</div>  

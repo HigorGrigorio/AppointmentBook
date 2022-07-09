@@ -1,0 +1,16 @@
+<%- include('./includes/head') %>
+<%- include('./includes/nav-bar') %> 
+<body>
+    <% if(contact) { %>
+        <div class="light-gray-cointainer">
+            <p class="text">Want to delete contact of <%= contact.name %>?</p>
+            <div class="flex-table" style="justify-content:center">
+                <a href="/contact/delete/<%= contact._id %>" class="pbtn">Confirm</a>
+                <a href="/contact/index" class="pbtn">Cancel</a>
+            </div>
+        </div>
+    <% } %>  
+    <script src="../../../assets/js/bundle.js"></script>
+</body>
+
+</html>

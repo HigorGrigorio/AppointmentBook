@@ -1,0 +1,33 @@
+@import './logo'
+@import './palette'
+
+.flex-table
+    display: flex
+    flex: 0 0 auto
+    flex-wrap: wrap
+
+.navigation-wrapper
+    @extend .flex-table
+
+.nav-content
+    justify-content: space-between
+
+.nav-bar
+    width: 100%
+    padding: 0 10px
+    border-bottom: 1px solid #ddd
+    position: fixed
+    background: #fff
+
+#nav-control
+    display: none
+
+@media screen and (max-width: 800px)
+    #nav-control
+        &:checked
+            ~.navigation-wrapper
+                display: none
+    .navigation-wrapper
+        flex-direction: column
+        width: 100%
+        justify-content: center

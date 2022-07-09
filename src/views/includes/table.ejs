@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="flex-table nav-content">
+        <h1 class="title">Your contacts</h1>
+        <a href="/contact/add/index" class="img-btn"><img src="../../assets/img/plus.png" alt=""></a>
+    </div>
+    <div>
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Telephone</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <% if(contacts.length > 0) {%> 
+            <% contacts.forEach((c) => { %> 
+                <tr>
+                    <td><%= c.name + ' ' + c.surname %></td>
+                    <td><%= c.email %></td>
+                    <td><%= c.telephone %></td>
+                    <td class="edit-remove-row">
+                        <a href="/contact/edit/index/<%= c._id %> " class="img-btn"><img src="../../assets/img/user.png" alt=""></a>
+                    </td>
+                    <td class="edit-remove-row">
+                        <a href="/contact/delete/confirm/<%= c._id %> " class="img-btn"><img src="../../assets/img/delete.png" alt=""></a>
+                    </td>
+                </tr>
+            <% }); %> 
+        <% } %> 
+    </table>
+    </div>
+</div>

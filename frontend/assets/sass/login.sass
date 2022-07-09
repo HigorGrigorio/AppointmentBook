@@ -1,0 +1,61 @@
+.form-wrapper
+    display: flex
+    flex-direction: column
+    width: 60%
+    height: 80%
+    align-items: center
+    justify-content: center
+
+.form
+    display: flex
+    flex-direction: column
+    width: 50%
+    height: 100%
+    align-items: center
+    justify-content: center
+    border: 1px solid $green
+    border-radius: 5px
+    background: #fff
+
+.label-input > input
+    display: flex
+    background-color: #ecf0f1
+    border: none
+    height: 100%
+    width: 100%
+    padding: 10px
+    &:focus
+        outline: 0
+
+.label-input
+    align-items: center
+    justify-content: center
+    display: flex
+    margin: 1% 0
+    padding: 0 5%
+    border: none
+    width: 70%
+    background: $light-gray
+    border: 1px solid $green
+    border-radius: 5px
+
+.icon-modify
+    color: #7f8c8d
+    padding: 0 4%
+    &>img
+        min-height: 24px
+        min-width: 24px
+        max-height: 24px
+        max-width: 24px
+        color: #fff
+
+.fypasswd
+    padding: 0 0 .5rem 0
+
+@media screen and (max-width: 1200px)
+    .form-wrapper
+        width: 100%
+        height: 100%
+    .form
+        width: 100%
+        height: 100%
